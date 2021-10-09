@@ -1,0 +1,22 @@
+{
+  "name": "headlinenews",
+  "version": "1.0.0",
+  "description": "A headline news summary app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EMDevelop/HeadlineNews.git"
+  },
+  "author": "Edward Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EMDevelop/HeadlineNews/issues"
+  },
+  "homepage": "https://github.com/EMDevelop/HeadlineNews#readme",
+  "dependencies": {
+    "http-server": "^13.0.2"
+  }
+}
