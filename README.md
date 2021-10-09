@@ -1,8 +1,11 @@
-# HeadlineNews
+# ChainEd
 
-A single page web app which reads and summarises headlines from the Guardian API.
+A single page web app which reads and summarises cryptocurrency news from the Guardian API.
 
 ---
+https://content.guardianapis.com/search?q=blockchain%20AND%20cryptocurrency%20AND%20ethereum%20AND%20bitcoin%20AND%20cardano&show-fields=all&show-elements=all&page=1&api-key=test
+
+http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=https://content.guardianapis.com/search?q=blockchain%20AND%20cryptocurrency%20AND%20ethereum%20AND%20bitcoin%20AND%20cardano&show-fields=all&show-elements=all&page=1&api-key=test
 
 #### User Stories
 
@@ -88,3 +91,15 @@ touch spec/spec.html
 mkdir views
 touch views/index.html
 ```
+
+### Question:
+
+
+##### This works
+https://content.guardianapis.com/search?q=blockchain%20AND%20cryptocurrency%20AND%20ethereum%20AND%20bitcoin%20AND%20cardano&show-fields=all&show-elements=all&page=1&api-key=test
+
+##### This complains it doesn't start with `must start with http://content.guardianapis.com`
+http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=https://content.guardianapis.com/search?q=blockchain%20AND%20cryptocurrency%20AND%20ethereum%20AND%20bitcoin%20AND%20cardano&show-fields=all&show-elements=all&page=1
+
+##### This has completely different results using the makers api. 
+https://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/search?q=blockchain%20AND%20cryptocurrency%20AND%20ethereum%20AND%20bitcoin%20AND%20cardano&show-fields=all&show-elements=all&page=1
