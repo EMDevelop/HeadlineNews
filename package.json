@@ -4,7 +4,8 @@
   "description": "A headline news summary app",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "open ./spec/spec.html",
+    "start": "http-server ./views"
   },
   "repository": {
     "type": "git",
