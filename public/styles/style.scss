@@ -1,0 +1,104 @@
+// ----------------------------------------- GLOBAL VARIABLES
+$c-text: #808080;
+$size-text-std: 15px;
+$size-text-head: 25px;
+$size-text-subhead: 20px;
+$radius: 5px;
+
+// ----------------------------------------- MIXINS
+
+// Center
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Header
+
+// Glass Background
+// @mixin gradient() {
+
+// }
+
+// ----------------------------------------- PAGE SETUP
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $c-text;
+  background: linear-gradient(
+    -45deg,
+    #fec5bb,
+    #fcd5ce,
+    #fae1dd,
+    #f8edeb,
+    #e8e8e4,
+    #ece4db,
+    #ffe5d9,
+    #ffd7ba,
+    #fec89a
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @font-face {
+    src: url(https://use.typekit.net/aav7lhy.css);
+    font-family: muli, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  font-family: muli, sans-serif;
+}
+
+header {
+  height: 8vh;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.3)
+  );
+  @include center();
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1080px;
+  height: 92vh;
+  width: 70%;
+  margin: auto;
+  border: solid 0.5px pink;
+}
+
+.story {
+  margin-top: 5px;
+  border-radius: $radius;
+  @include center();
+  border: solid 3px red;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.3)
+  );
+  margin: auto;
+  width: 90%;
+  height: fit-content;
+}

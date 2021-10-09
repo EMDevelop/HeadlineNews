@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "open ./spec/spec.html",
-    "start": "http-server ./views"
+    "start": "http-server ./"
   },
   "repository": {
     "type": "git",
