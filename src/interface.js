@@ -43,8 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   };
 
-  const handleToggleClick = (e) => {};
-
   // User clicks on a "see more" on each card
   const toggleListner = () => {
     const buttons = document.querySelectorAll('#toggle');

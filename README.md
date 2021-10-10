@@ -93,7 +93,7 @@ mkdir views
 touch views/index.html
 ```
 
-### Question:
+### Question: Why did my url not work?
 
 ##### This works
 
@@ -106,35 +106,3 @@ http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=https://content.gua
 ##### This has completely different results using the makers api.
 
 https://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/search?q=blockchain%20AND%20cryptocurrency%20AND%20ethereum%20AND%20bitcoin%20AND%20cardano&show-fields=all&show-elements=all&page=1
-
-### Single Page Web App - .env var
-
-```
-npm i dotenv
-echo '.env' >> .gitignore
-git add .
-git commit -m "adding .env to gitignore"
-touch .env
-echo 'KEY=' >> .env
-git add .
-git status
-```
-
-I've tried:
-
-- adding "type": "module", to my packages.json
-- then import dotenv from 'dotenv';
-- but I get the error interface.js:6 Uncaught SyntaxError: Cannot use import statement outside a module
-- I also tried changing the index.html to <script type="module" src="./src/interface.js"></script>
-- also tried importing with an exact path: import dotenv from '../node_modules/dotenv/config';
-- but I got `GET http://127.0.0.1:8080/node_modules/dotenv/config net::ERR_ABORTED 404 (Not Found)`
-  also tried
-- require('dotenv').config();
-- but then i got Uncaught SyntaxError: Cannot use import statement outside a module
-
-Then i tried the below as per https://stackoverflow.com/questions/47969045/require-is-not-defined-error-when-trying-to-set-up-env-file
-
-```
-sudo npm install -g browserify
-browserify ./src/interface.js -o bundle.js
-```
