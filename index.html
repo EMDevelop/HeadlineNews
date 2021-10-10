@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="public/styles/style.css" />
   </head>
   <body>
+    <div class="hidden">
+      <p id="fetch" class="hidden"></p>
+    </div>
     <div class="lines">
       <div class="line"></div>
       <div class="line"></div>
@@ -17,13 +20,14 @@
       <h1>Cryptocurrency News</h1>
     </header>
     <main>
-      <div class="story"></div>
-      <div class="story"></div>
-      <div class="story"></div>
+      <div id="stories" class="stories"></div>
     </main>
 
     <script src="./src/interface.js"></script>
     <script src="./src/headlines.js"></script>
     <script src="./src/story.js"></script>
+    <script src="./spec/frontend/specFunctions/matchers.js"></script>
+    <script src="./spec/frontend/specFunctions/specCommands.js"></script>
+    <script src="./spec/backend/featureSpec.js"></script>
   </body>
 </html>

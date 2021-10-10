@@ -25,26 +25,34 @@ $radius: 5px;
 html,
 body {
   width: 100%;
-  height: 100%;
+  height: fit-content;
   margin: 0;
   padding: 0;
 }
 
 body {
   color: $c-text;
+  // background: linear-gradient(
+  //   -45deg,
+  //   #fec5bb,
+  //   #fcd5ce,
+  //   #fae1dd,
+  //   #f8edeb,
+  //   #e8e8e4,
+  //   #ece4db,
+  //   #ffe5d9,
+  //   #ffd7ba,
+  //   #fec89a
+  // );
   background: linear-gradient(
     -45deg,
-    #fec5bb,
-    #fcd5ce,
-    #fae1dd,
-    #f8edeb,
-    #e8e8e4,
-    #ece4db,
-    #ffe5d9,
-    #ffd7ba,
-    #fec89a
+    rgb(207, 247, 207),
+    #feefca,
+    #d5aee6,
+    #a0e2d3,
+    #85c7de
   );
-  background-size: 400% 400%;
+  background-size: cover;
   animation: gradient 15s ease infinite;
 
   @keyframes gradient {
@@ -82,23 +90,98 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   max-width: 1080px;
-  height: 92vh;
+  min-height: 92vh;
+  height: fit-content;
   width: 70%;
   margin: auto;
-  border: solid 0.5px pink;
+  padding-bottom: 20px;
 }
 
+//
+
+.hidden {
+  display: none;
+}
+
+.stories {
+  margin-top: 20px;
+  height: fit-content;
+  width: 100%;
+}
+
+//  STORY
+
 .story {
-  margin-top: 5px;
   border-radius: $radius;
   @include center();
-  border: solid 3px red;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.6),
     rgba(255, 255, 255, 0.3)
   );
   margin: auto;
+  margin-top: 20px;
   width: 90%;
   height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  .toggle {
+    margin-top: 20px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include center();
+    input {
+      border: none;
+      outline: none;
+      background: none;
+      color: rgb(0, 123, 255);
+      font-size: $size-text-std;
+      width: 100%;
+      height: fit-content;
+    }
+  }
+
+  .thumbnail {
+    margin-top: 20px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    border-radius: $radius;
+  }
+
+  .title {
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: $size-text-head;
+    font-weight: bold;
+  }
+
+  .preview {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .body {
+    margin-top: 20px;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .body hidden {
+    display: none;
+  }
 }

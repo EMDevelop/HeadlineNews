@@ -1,15 +1,17 @@
 html,
 body {
   width: 100%;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0;
   padding: 0;
 }
 
 body {
   color: #808080;
-  background: linear-gradient(-45deg, #fec5bb, #fcd5ce, #fae1dd, #f8edeb, #e8e8e4, #ece4db, #ffe5d9, #ffd7ba, #fec89a);
-  background-size: 400% 400%;
+  background: linear-gradient(-45deg, #cff7cf, #feefca, #d5aee6, #a0e2d3, #85c7de);
+  background-size: cover;
   -webkit-animation: gradient 15s ease infinite;
           animation: gradient 15s ease infinite;
   font-family: muli, sans-serif;
@@ -69,14 +71,28 @@ main {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   max-width: 1080px;
-  height: 92vh;
+  min-height: 92vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 70%;
   margin: auto;
-  border: solid 0.5px pink;
+  padding-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.stories {
+  margin-top: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
 }
 
 .story {
-  margin-top: 5px;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,13 +103,105 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: solid 3px red;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.3)));
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
   margin: auto;
+  margin-top: 20px;
   width: 90%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.story .toggle {
+  margin-top: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.story .toggle input {
+  border: none;
+  outline: none;
+  background: none;
+  color: #007bff;
+  font-size: 15px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.story .thumbnail {
+  margin-top: 20px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.story img {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.story .title {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.story .preview {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.story .body {
+  margin-top: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+
+.story .body hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
